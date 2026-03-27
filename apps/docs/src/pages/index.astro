@@ -1,0 +1,129 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const sections = [
+  {
+    href: "/system",
+    label: "System",
+    title: "Design principles, architecture, and package boundaries.",
+    note: "How Bitsy UI stays token-led and portable."
+  },
+  {
+    href: "/tokens",
+    label: "Tokens",
+    title: "Color, type, spacing, radius, shadow, and motion scales.",
+    note: "The source of truth for every runtime."
+  },
+  {
+    href: "/components",
+    label: "Components",
+    title: "Reusable blocks and interactive patterns.",
+    note: "Small surfaces with semantic defaults."
+  },
+  {
+    href: "/templates",
+    label: "Templates",
+    title: "Composed page structures and product starting points.",
+    note: "Patterns for landing, dashboard, and marketing shells."
+  }
+];
+---
+
+<DocsLayout
+  title="Bitsy UI Docs"
+  description="Bitsy UI documentation for the system, tokens, components, and templates."
+  currentPath="/"
+>
+  <section class="hero hero--home">
+    <div class="content-stack">
+      <span class="eyebrow">Bitsy UI docs</span>
+      <h1>Build from tokens, not from guesswork.</h1>
+      <p>
+        Bitsy UI is a token-led design system for websites, apps, and brand surfaces. The docs
+        center the system model first, then trace how tokens become runtime variables, components,
+        and templates.
+      </p>
+      <div class="hero__actions">
+        <a class="button-link" href="/system">Read the system</a>
+        <a class="button-link--ghost" href="/tokens">Browse the tokens</a>
+      </div>
+    </div>
+
+    <aside class="hero__panel">
+      <div class="hero__panel-title">Coverage map</div>
+      <div class="hero__meter">
+        <span class="hero__meter-value">4 sections</span>
+        <span>System model, token inventory, component guidance, and template composition.</span>
+        <div class="hero__meter-bar"></div>
+      </div>
+      <div class="hero__meter">
+        <span class="hero__meter-value">CSS-first</span>
+        <span>Native CSS variables and semantic naming keep the runtime portable.</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="content-stack">
+    <div class="section-header">
+      <div class="content-stack">
+        <span class="eyebrow">Explore</span>
+        <h2>Navigate the system surface.</h2>
+      </div>
+      <p>
+        Each section is a working map of one design-system layer, from the foundation model to
+        composed outcomes.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <a class="feature-card feature-card--accent" href="/system">
+        <span class="feature-card__tag">System</span>
+        <h3>Operating model</h3>
+        <p>See how packages, principles, and runtime choices fit together before implementation.</p>
+        <div class="feature-card__swatch" style="--swatch-a: #f7d8c1; --swatch-b: #d96d32;"></div>
+      </a>
+
+      <a class="feature-card feature-card--sky" href="/tokens">
+        <span class="feature-card__tag">Tokens</span>
+        <h3>Portable decisions</h3>
+        <p>Inspect the semantic language that drives color, spacing, typography, motion, and theme.</p>
+        <div class="feature-card__swatch" style="--swatch-a: #e0f2fe; --swatch-b: #0ea5e9;"></div>
+      </a>
+
+      <a class="feature-card feature-card--garden" href="/components">
+        <span class="feature-card__tag">Components</span>
+        <h3>Reusable surfaces</h3>
+        <p>Understand how small, accessible primitives carry the visual system into product UI.</p>
+        <div class="feature-card__swatch" style="--swatch-a: #dce7cf; --swatch-b: #7e9d5a;"></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="split-grid">
+    <aside class="rail-card section-rail">
+      <span class="eyebrow">Index</span>
+      <ul>
+        {
+          sections.map((section) => (
+            <li>
+              <a href={section.href}>{section.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+
+    <div class="content-stack">
+      {
+        sections.map((section) => (
+          <a class="index-card" href={section.href}>
+            <span class="index-card__tag">{section.label}</span>
+            <h3>{section.title}</h3>
+            <p>{section.note}</p>
+            <div class="index-card__line"></div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</DocsLayout>

@@ -1,0 +1,28 @@
+---
+const { currentPath = "/" } = Astro.props;
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/system", label: "System" },
+  { href: "/tokens", label: "Tokens" },
+  { href: "/components", label: "Components" },
+  { href: "/templates", label: "Templates" }
+];
+---
+
+<header class="topbar">
+  <a class="topbar__mark" href="/">
+    <span class="topbar__orb"></span>
+    <span>Bitsy UI</span>
+  </a>
+  <nav class="topbar__nav" aria-label="Primary">
+    {
+      links.map((link) => (
+        <a href={link.href} aria-current={currentPath === link.href ? "page" : undefined}>
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+  <a class="topbar__action" href="/tokens">Start with tokens</a>
+</header>

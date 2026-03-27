@@ -1,0 +1,80 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const templates = [
+  ["Landing", "Narrative hero, proof blocks, and conversion sections for marketing surfaces."],
+  ["Dashboard", "Navigation rails, data cards, filters, and dense content rhythms."],
+  ["Showcase", "Editorial galleries and brand-forward layouts for case studies or launches."]
+];
+---
+
+<DocsLayout
+  title="Templates | Bitsy UI"
+  description="Bitsy UI template guidance for composed pages and product shells."
+  currentPath="/templates"
+>
+  <section class="hero">
+    <span class="eyebrow">Templates</span>
+    <h2>Composed structures for real product surfaces.</h2>
+    <p>
+      Templates show how tokens, styles, and components scale into fuller layouts. They should
+      guide rhythm and hierarchy without becoming rigid page builders or bypassing the core system.
+    </p>
+  </section>
+
+  <section class="split-grid">
+    <aside class="rail-card section-rail">
+      <span class="eyebrow">Template map</span>
+      <ul>
+        <li><a href="#families">Families</a></li>
+        <li><a href="#composition">Composition rules</a></li>
+        <li><a href="#handoff">Handoff</a></li>
+      </ul>
+    </aside>
+
+    <div class="content-stack">
+      <section class="mini-grid" id="families">
+        {
+          templates.map(([title, description]) => (
+            <article class="mini-card">
+              <span class="mini-card__tag">{title}</span>
+              <span class="mini-card__value">{title.slice(0, 3)}</span>
+              <p>{description}</p>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="rail-card" id="composition">
+        <span class="mini-card__tag">Composition rules</span>
+        <ul class="bullet-list">
+          <li>Templates should express hierarchy, spacing rhythm, and reusable zones instead of frozen pixel layouts.</li>
+          <li>Use compositions and blocks to assemble pages so design decisions stay traceable to the system.</li>
+          <li>Reserve bespoke visuals for brand moments, while keeping foundational structure system-driven.</li>
+        </ul>
+      </section>
+
+      <section class="rail-card" id="handoff">
+        <span class="mini-card__tag">Implementation handoff</span>
+        <dl class="spec-list">
+          <div>
+            <dt>Docs</dt>
+            <dd>Document the intended content model and responsive behavior for each template family.</dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd>Provide starter compositions rather than monolithic page components tied to a single app.</dd>
+          </div>
+          <div>
+            <dt>Brand</dt>
+            <dd>Let color, media, and voice shift per product while layout grammar remains recognizable.</dd>
+          </div>
+          <div>
+            <dt>QA</dt>
+            <dd>Review templates in realistic content ranges so density and overflow issues surface early.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </section>
+</DocsLayout>

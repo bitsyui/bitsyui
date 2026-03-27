@@ -1,0 +1,81 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const componentAreas = [
+  ["Primitives", "Buttons, fields, overlays, and text treatments built on semantic tokens."],
+  ["Patterns", "Navigation, forms, panels, and feedback states composed from small blocks."],
+  ["Behavior", "Keyboard support, focus handling, and state coverage verified in Storybook."]
+];
+---
+
+<DocsLayout
+  title="Components | Bitsy UI"
+  description="Bitsy UI component model, accessibility priorities, and coverage areas."
+  currentPath="/components"
+>
+  <section class="hero">
+    <span class="eyebrow">Components</span>
+    <h2>Small surfaces, consistent behaviors.</h2>
+    <p>
+      Components are where the system meets product interaction. Bitsy UI keeps them intentionally
+      compact, token-driven, and accessible, with styling separated from framework-specific logic
+      wherever possible.
+    </p>
+  </section>
+
+  <section class="split-grid">
+    <aside class="rail-card section-rail">
+      <span class="eyebrow">Focus</span>
+      <ul>
+        <li><a href="#model">Model</a></li>
+        <li><a href="#coverage">Coverage</a></li>
+        <li><a href="#quality">Quality bar</a></li>
+      </ul>
+    </aside>
+
+    <div class="content-stack">
+      <section class="mini-grid" id="model">
+        {
+          componentAreas.map(([title, description]) => (
+            <article class="mini-card">
+              <span class="mini-card__tag">{title}</span>
+              <span class="mini-card__value">{title === "Behavior" ? "QA" : "UI"}</span>
+              <p>{description}</p>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="rail-card" id="coverage">
+        <span class="mini-card__tag">Coverage</span>
+        <ul class="bullet-list">
+          <li>Document component purpose, anatomy, variants, and accessibility expectations.</li>
+          <li>Keep stories focused on states, not on visual improvisation outside the token system.</li>
+          <li>Separate framework-neutral styling from interactive wrappers so more runtimes stay possible.</li>
+        </ul>
+      </section>
+
+      <section class="rail-card" id="quality">
+        <span class="mini-card__tag">Quality bar</span>
+        <dl class="spec-list">
+          <div>
+            <dt>Keyboard</dt>
+            <dd>Every interactive surface should remain usable without a pointer.</dd>
+          </div>
+          <div>
+            <dt>Tokens</dt>
+            <dd>Spacing, color, radius, and motion decisions should resolve through semantic tokens.</dd>
+          </div>
+          <div>
+            <dt>States</dt>
+            <dd>Default, hover, focus, active, disabled, and error states should all be visible in isolation.</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>Prefer a small proven primitive over broad abstractions that have not earned their shape yet.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </section>
+</DocsLayout>

@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "astro": "^5.14.0"
+  },
   "scripts": {
-    "build": "echo \"build docs later\"",
-    "dev": "echo \"run docs later\"",
-    "lint": "echo \"lint docs later\"",
+    "build": "astro build",
+    "dev": "astro dev",
+    "lint": "astro check",
     "test": "echo \"no docs tests yet\"",
-    "format": "echo \"format docs later\""
+    "format": "prettier --check ."
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8"
   }
 }

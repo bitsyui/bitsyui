@@ -1,0 +1,90 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const tokenFamilies = [
+  ["Color", "Foundation palettes and semantic roles for background, border, and text."],
+  ["Type", "Families, sizes, weights, line heights, and letter spacing for readable hierarchy."],
+  ["Spacing", "Inset, stack, and inline steps that scale cleanly between compact and roomy layouts."],
+  ["Radius", "Shared corner language for surfaces, interactive controls, and focus treatments."],
+  ["Shadow", "Subtle to strong depth tokens that separate surfaces without visual noise."],
+  ["Motion", "Duration and easing choices for feedback, transitions, and more deliberate emphasis."]
+];
+---
+
+<DocsLayout
+  title="Tokens | Bitsy UI"
+  description="Bitsy UI token families, themes, and runtime intent."
+  currentPath="/tokens"
+>
+  <section class="hero">
+    <span class="eyebrow">Tokens</span>
+    <h2>Semantic names that can move between runtimes.</h2>
+    <p>
+      Tokens carry system intent in a portable format. Foundation scales establish range, semantic
+      aliases describe use, and theme layers remap those roles for light and dark surfaces without
+      renaming the interface contract.
+    </p>
+  </section>
+
+  <section class="split-grid">
+    <aside class="rail-card section-rail">
+      <span class="eyebrow">Layers</span>
+      <ul>
+        <li><a href="#base">Base scales</a></li>
+        <li><a href="#semantic">Semantic roles</a></li>
+        <li><a href="#themes">Themes</a></li>
+      </ul>
+    </aside>
+
+    <div class="content-stack">
+      <section class="card-grid" id="base">
+        {
+          tokenFamilies.map(([name, description], index) => (
+            <article class={`feature-card ${index % 3 === 0 ? "feature-card--accent" : index % 3 === 1 ? "feature-card--sky" : "feature-card--garden"}`}>
+              <span class="feature-card__tag">Base</span>
+              <h3>{name}</h3>
+              <p>{description}</p>
+              <div
+                class="feature-card__swatch"
+                style={
+                  index % 3 === 0
+                    ? "--swatch-a: #fde7d6; --swatch-b: #d96d32;"
+                    : index % 3 === 1
+                      ? "--swatch-a: #d9edf7; --swatch-b: #0ea5e9;"
+                      : "--swatch-a: #dde8d2; --swatch-b: #7e9d5a;"
+                }
+              ></div>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="rail-card" id="semantic">
+        <span class="mini-card__tag">Semantic roles</span>
+        <ul class="bullet-list">
+          <li>Use names like `background.surface`, `text.primary`, and `spacing.stack.standard`.</li>
+          <li>Keep token meanings durable so component APIs do not change with a theme or brand refresh.</li>
+          <li>Prefer semantic indirection over hard-coded palette references in product code.</li>
+        </ul>
+      </section>
+
+      <section class="mini-grid" id="themes">
+        <article class="mini-card">
+          <span class="mini-card__tag">Light</span>
+          <span class="mini-card__value">Default</span>
+          <p>Bright canvas, restrained borders, and dark text for editorial clarity and UI legibility.</p>
+        </article>
+        <article class="mini-card">
+          <span class="mini-card__tag">Dark</span>
+          <span class="mini-card__value">Inverse</span>
+          <p>Deep neutral surfaces and lifted text roles that preserve the same semantic contract.</p>
+        </article>
+        <article class="mini-card">
+          <span class="mini-card__tag">Runtime</span>
+          <span class="mini-card__value">CSS vars</span>
+          <p>Theme layers compile cleanly into custom properties for web without Sass or CSS-in-JS.</p>
+        </article>
+      </section>
+    </div>
+  </section>
+</DocsLayout>

@@ -1,0 +1,85 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const architecture = [
+  "Tokens are the source of truth, with semantic names chosen for portability instead of framework assumptions.",
+  "CSS custom properties are the runtime layer for web, so themes and component styling can stay native.",
+  "Astro handles docs and examples, while Solid is reserved for the interactive runtime package."
+];
+
+const packages = [
+  ["packages/tokens", "Base scales, semantic roles, and theme token sets."],
+  ["packages/styles", "Reset, variable output, compositions, blocks, utilities, and theme CSS."],
+  ["packages/ui-solid", "Interactive Solid components built on the same tokens and styles."],
+  ["apps/docs", "Editorial documentation and visual gallery for the system."],
+  ["apps/storybook", "Isolated states, QA, and visual coverage for components."]
+];
+---
+
+<DocsLayout
+  title="System | Bitsy UI"
+  description="Bitsy UI system architecture, principles, and package boundaries."
+  currentPath="/system"
+>
+  <section class="hero">
+    <span class="eyebrow">System</span>
+    <h2>One source of truth, several runtimes.</h2>
+    <p>
+      Bitsy UI organizes decisions in layers so the design system can grow without hiding where
+      meaning lives. Tokens define intent, styles expose runtime variables, and component packages
+      consume those primitives with as little framework coupling as possible.
+    </p>
+  </section>
+
+  <section class="split-grid">
+    <aside class="rail-card section-rail">
+      <span class="eyebrow">Core rules</span>
+      <ul>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#outcomes">Outcomes</a></li>
+      </ul>
+    </aside>
+
+    <div class="content-stack">
+      <section class="rail-card" id="architecture">
+        <span class="mini-card__tag">Architecture</span>
+        <ul class="bullet-list">
+          {architecture.map((item) => <li>{item}</li>)}
+        </ul>
+      </section>
+
+      <section class="rail-card" id="packages">
+        <span class="mini-card__tag">Package map</span>
+        <dl class="spec-list">
+          {
+            packages.map(([name, description]) => (
+              <div>
+                <dt>{name}</dt>
+                <dd>{description}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section class="mini-grid" id="outcomes">
+        <article class="mini-card">
+          <span class="mini-card__tag">Portable</span>
+          <span class="mini-card__value">Native</span>
+          <p>CSS variables and semantic names travel across marketing, product, and docs surfaces.</p>
+        </article>
+        <article class="mini-card">
+          <span class="mini-card__tag">Reviewable</span>
+          <span class="mini-card__value">Small</span>
+          <p>Package boundaries encourage incremental changes instead of monolithic system rewrites.</p>
+        </article>
+        <article class="mini-card">
+          <span class="mini-card__tag">Accessible</span>
+          <span class="mini-card__value">First</span>
+          <p>Semantic HTML, keyboard support, and clear naming stay in scope from the start.</p>
+        </article>
+      </section>
+    </div>
+  </section>
+</DocsLayout>

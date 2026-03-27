@@ -1,0 +1,32 @@
+---
+import SiteNav from "../components/SiteNav.astro";
+import "../styles/docs.css";
+
+const {
+  title = "Bitsy UI",
+  description = "Token-led visual design system for web, apps, and brands.",
+  currentPath = "/"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <div class="site-shell">
+      <SiteNav currentPath={currentPath} />
+      <main class="page-grid">
+        <slot />
+      </main>
+      <footer class="page-footer">
+        <span>Bitsy UI documents the system from tokens to templates.</span>
+        <span>Astro-powered, CSS-first, intentionally small.</span>
+      </footer>
+    </div>
+  </body>
+</html>
