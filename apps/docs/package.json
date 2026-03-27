@@ -1,0 +1,13 @@
+{
+  "name": "@bitsyui/docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"build docs later\"",
+    "dev": "echo \"run docs later\"",
+    "lint": "echo \"lint docs later\"",
+    "test": "echo \"no docs tests yet\"",
+    "format": "echo \"format docs later\""
+  }
+}

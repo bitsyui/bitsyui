@@ -1,0 +1,13 @@
+{
+  "name": "@bitsyui/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"build storybook later\"",
+    "storybook": "echo \"run storybook later\"",
+    "lint": "echo \"lint storybook later\"",
+    "test": "echo \"no storybook tests yet\"",
+    "format": "echo \"format storybook later\""
+  }
+}
