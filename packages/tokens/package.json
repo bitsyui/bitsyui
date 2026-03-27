@@ -1,0 +1,13 @@
+{
+  "name": "@bitsyui/tokens",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "files": ["dist"],
+  "scripts": {
+    "build": "echo \"build tokens later\"",
+    "lint": "echo \"lint tokens later\"",
+    "test": "echo \"no tests yet\"",
+    "format": "echo \"format tokens later\""
+  }
+}

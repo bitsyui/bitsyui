@@ -1,0 +1,13 @@
+{
+  "name": "@bitsyui/styles",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "files": ["dist"],
+  "scripts": {
+    "build": "echo \"build styles later\"",
+    "lint": "echo \"lint styles later\"",
+    "test": "echo \"no tests yet\"",
+    "format": "echo \"format styles later\""
+  }
+}

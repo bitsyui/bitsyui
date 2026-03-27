@@ -1,0 +1,13 @@
+{
+  "name": "@bitsyui/ui-solid",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "files": ["dist"],
+  "scripts": {
+    "build": "echo \"build solid ui later\"",
+    "lint": "echo \"lint solid ui later\"",
+    "test": "echo \"no tests yet\"",
+    "format": "echo \"format solid ui later\""
+  }
+}

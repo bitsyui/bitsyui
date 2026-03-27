@@ -1,0 +1,18 @@
+{
+  "name": "bitsyui",
+  "private": true,
+  "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter @bitsyui/docs dev",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "format": "pnpm -r format",
+    "storybook": "pnpm --filter @bitsyui/storybook storybook"
+  },
+  "devDependencies": {
+    "eslint": "^10.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^6.0.2"
+  }
+}
