@@ -3,11 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "dependencies": {
+    "@bitsyui/styles": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-controls": "^8.6.14",
+    "@storybook/html": "^8.6.14",
+    "@storybook/html-vite": "^8.6.14",
+    "storybook": "^8.6.14"
+  },
   "scripts": {
-    "build": "echo \"build storybook later\"",
-    "storybook": "echo \"run storybook later\"",
-    "lint": "echo \"lint storybook later\"",
+    "build": "CI=1 STORYBOOK_DISABLE_TELEMETRY=1 HOME=/tmp/bitsyui-storybook-home storybook build",
+    "storybook": "STORYBOOK_DISABLE_TELEMETRY=1 HOME=/tmp/bitsyui-storybook-home storybook dev -p 6006",
+    "lint": "CI=1 STORYBOOK_DISABLE_TELEMETRY=1 HOME=/tmp/bitsyui-storybook-home storybook build --test --output-dir /tmp/bitsyui-storybook-test",
     "test": "echo \"no storybook tests yet\"",
-    "format": "echo \"format storybook later\""
+    "format": "prettier --check ."
   }
 }
