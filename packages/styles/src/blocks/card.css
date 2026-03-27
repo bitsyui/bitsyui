@@ -1,0 +1,40 @@
+@layer bitsy-blocks {
+  .b-card {
+    display: grid;
+    gap: var(--bitsy-space-stack-standard);
+    min-inline-size: 0;
+  }
+
+  .b-card__header,
+  .b-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--bitsy-space-inline-standard);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .b-card__eyebrow {
+    margin: 0;
+    color: var(--bitsy-color-text-secondary);
+    font-size: var(--bitsy-font-size-caption);
+    font-weight: var(--bitsy-font-weight-emphasis);
+    letter-spacing: var(--bitsy-letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
+  .b-card__title {
+    margin: 0;
+    color: var(--bitsy-color-text-primary);
+    font-size: var(--bitsy-font-size-heading);
+    font-weight: var(--bitsy-font-weight-heading);
+    line-height: var(--bitsy-line-height-heading);
+  }
+
+  .b-card__description,
+  .b-card__body {
+    margin: 0;
+    color: var(--bitsy-color-text-secondary);
+    line-height: var(--bitsy-line-height-body);
+  }
+}

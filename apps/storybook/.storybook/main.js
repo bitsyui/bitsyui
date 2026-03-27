@@ -1,8 +1,7 @@
-/** @type {import('@storybook/html-vite').StorybookConfig} */
+/** @type {import('storybook-solidjs-vite').StorybookConfig} */
 const config = {
-  framework: "@storybook/html-vite",
-  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: ["@storybook/addon-controls"],
+  framework: "storybook-solidjs-vite",
+  stories: ["../src/**/*.stories.@(ts|tsx)"],
   docs: {
     autodocs: false
   }

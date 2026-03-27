@@ -1,0 +1,50 @@
+@layer bitsy-blocks {
+  .b-tabs {
+    display: grid;
+    gap: var(--bitsy-space-stack-standard);
+  }
+
+  .b-tabs__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--bitsy-space-inline-compact);
+    padding: var(--bitsy-space-1);
+    border: 1px solid var(--bitsy-color-border-subtle);
+    border-radius: calc(var(--bitsy-radius-surface) + var(--bitsy-space-1));
+    background: var(--bitsy-color-background-surface);
+  }
+
+  .b-tabs__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 2.5rem;
+    padding-inline: var(--bitsy-space-inset-comfortable);
+    border: 0;
+    border-radius: var(--bitsy-radius-interactive);
+    background: transparent;
+    color: var(--bitsy-color-text-secondary);
+    font-weight: var(--bitsy-font-weight-emphasis);
+  }
+
+  .b-tabs__trigger:where(:hover, :focus-visible) {
+    background: var(--bitsy-color-background-muted);
+    color: var(--bitsy-color-text-primary);
+    outline: none;
+  }
+
+  .b-tabs__trigger[aria-selected="true"] {
+    background: var(--bitsy-color-background-emphasis);
+    color: var(--bitsy-color-text-inverse);
+    box-shadow: var(--bitsy-shadow-surface);
+  }
+
+  .b-tabs__trigger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .b-tabs__panel {
+    min-inline-size: 0;
+  }
+}

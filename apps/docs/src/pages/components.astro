@@ -6,6 +6,15 @@ const componentAreas = [
   ["Patterns", "Navigation, forms, panels, and feedback states composed from small blocks."],
   ["Behavior", "Keyboard support, focus handling, and state coverage verified in Storybook."]
 ];
+
+const currentSet = [
+  ["Button", "Action trigger with semantic button markup and token-driven variants."],
+  ["Input", "Labeled field shell with hint and error messaging support."],
+  ["Card", "Surface container with small composition helpers for header, body, and footer."],
+  ["Tabs", "Accessible tablist and tabpanel behavior with keyboard navigation."],
+  ["Modal", "Dialog primitive with focus trapping, escape handling, and backdrop dismissal."],
+  ["Dropdown Menu", "Menu button pattern with menu roles and directional keyboard support."]
+];
 ---
 
 <DocsLayout
@@ -53,6 +62,20 @@ const componentAreas = [
           <li>Keep stories focused on states, not on visual improvisation outside the token system.</li>
           <li>Separate framework-neutral styling from interactive wrappers so more runtimes stay possible.</li>
         </ul>
+      </section>
+
+      <section class="rail-card">
+        <span class="mini-card__tag">Current Solid set</span>
+        <dl class="spec-list">
+          {
+            currentSet.map(([name, description]) => (
+              <div>
+                <dt>{name}</dt>
+                <dd>{description}</dd>
+              </div>
+            ))
+          }
+        </dl>
       </section>
 
       <section class="rail-card" id="quality">

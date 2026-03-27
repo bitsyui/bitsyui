@@ -1,0 +1,60 @@
+@layer bitsy-blocks {
+  .b-field {
+    display: grid;
+    gap: var(--bitsy-space-stack-compact);
+    min-inline-size: 0;
+  }
+
+  .b-label {
+    color: var(--bitsy-color-text-primary);
+    font-size: var(--bitsy-font-size-caption);
+    font-weight: var(--bitsy-font-weight-emphasis);
+    letter-spacing: var(--bitsy-letter-spacing-wide);
+    text-transform: uppercase;
+  }
+
+  .b-input {
+    inline-size: 100%;
+    min-block-size: 2.75rem;
+    padding-inline: var(--bitsy-space-inset-comfortable);
+    padding-block: var(--bitsy-space-inset-compact);
+    border: 1px solid var(--bitsy-color-border-standard);
+    border-radius: var(--bitsy-radius-interactive);
+    background: var(--bitsy-color-background-canvas);
+    color: var(--bitsy-color-text-primary);
+    box-shadow: var(--bitsy-shadow-surface);
+    transition:
+      border-color var(--bitsy-motion-duration-feedback) var(--bitsy-motion-easing-standard),
+      box-shadow var(--bitsy-motion-duration-feedback) var(--bitsy-motion-easing-standard);
+  }
+
+  .b-input::placeholder {
+    color: var(--bitsy-color-text-secondary);
+  }
+
+  .b-input:where(:focus, :focus-visible) {
+    border-color: var(--bitsy-color-border-emphasis);
+    outline: 2px solid color-mix(in srgb, var(--bitsy-color-border-emphasis) 20%, transparent);
+    outline-offset: 2px;
+  }
+
+  .b-input[aria-invalid="true"] {
+    border-color: var(--bitsy-color-text-danger);
+  }
+
+  .b-input:disabled {
+    background: var(--bitsy-color-background-muted);
+    color: var(--bitsy-color-text-secondary);
+    cursor: not-allowed;
+  }
+
+  .b-field__hint {
+    color: var(--bitsy-color-text-secondary);
+    font-size: var(--bitsy-font-size-caption);
+    line-height: var(--bitsy-line-height-body);
+  }
+
+  .b-field__hint[data-tone="danger"] {
+    color: var(--bitsy-color-text-danger);
+  }
+}

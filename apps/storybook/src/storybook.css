@@ -108,6 +108,10 @@ html[data-bitsy-theme="dark"] .sb-header {
   line-height: var(--bitsy-line-height-body);
 }
 
+.qa-card-frame {
+  inline-size: min(100%, 26rem);
+}
+
 .qa-button {
   display: inline-flex;
   align-items: center;

@@ -9,7 +9,9 @@ Included placeholder stories:
 - `QA/Components/Button`
 - `QA/Components/Input`
 - `QA/Components/Card`
-- `QA/Components/Badge`
+- `QA/Components/Tabs`
+- `QA/Components/Modal`
+- `QA/Components/Dropdown Menu`
 
 Theme coverage:
 

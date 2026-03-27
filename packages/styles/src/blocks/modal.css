@@ -1,0 +1,50 @@
+@layer bitsy-blocks {
+  .b-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: grid;
+    place-items: center;
+    padding: var(--bitsy-space-4);
+  }
+
+  .b-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(2 6 23 / 0.56);
+    backdrop-filter: blur(6px);
+  }
+
+  .b-modal__dialog {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--bitsy-space-stack-standard);
+    inline-size: min(100%, 36rem);
+    max-block-size: min(100%, 42rem);
+    overflow: auto;
+  }
+
+  .b-modal__header,
+  .b-modal__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--bitsy-space-inline-standard);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .b-modal__title {
+    margin: 0;
+    font-size: var(--bitsy-font-size-heading);
+    font-weight: var(--bitsy-font-weight-heading);
+    line-height: var(--bitsy-line-height-heading);
+  }
+
+  .b-modal__description,
+  .b-modal__body {
+    margin: 0;
+    color: var(--bitsy-color-text-secondary);
+    line-height: var(--bitsy-line-height-body);
+  }
+}
