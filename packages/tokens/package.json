@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "files": ["dist"],
+  "files": ["src"],
+  "exports": {
+    ".": "./src/index.js",
+    "./base": "./src/base/index.js",
+    "./semantic": "./src/semantic/index.js",
+    "./themes": "./src/themes/index.js"
+  },
   "scripts": {
     "build": "echo \"build tokens later\"",
     "lint": "echo \"lint tokens later\"",
