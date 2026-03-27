@@ -1,0 +1,126 @@
+@layer bitsy-tokens {
+  /*
+   * Temporary runtime variable layer for the initial token package.
+   * These values mirror the current tokens package until automated token output exists.
+   */
+  :root {
+    --bitsy-color-palette-neutral-0: #ffffff;
+    --bitsy-color-palette-neutral-50: #f8fafc;
+    --bitsy-color-palette-neutral-100: #f1f5f9;
+    --bitsy-color-palette-neutral-200: #e2e8f0;
+    --bitsy-color-palette-neutral-300: #cbd5e1;
+    --bitsy-color-palette-neutral-400: #94a3b8;
+    --bitsy-color-palette-neutral-500: #64748b;
+    --bitsy-color-palette-neutral-600: #475569;
+    --bitsy-color-palette-neutral-700: #334155;
+    --bitsy-color-palette-neutral-800: #1e293b;
+    --bitsy-color-palette-neutral-900: #0f172a;
+    --bitsy-color-palette-neutral-950: #020617;
+
+    --bitsy-color-palette-brand-100: #e0f2fe;
+    --bitsy-color-palette-brand-300: #7dd3fc;
+    --bitsy-color-palette-brand-500: #0ea5e9;
+    --bitsy-color-palette-brand-700: #0369a1;
+    --bitsy-color-palette-brand-900: #082f49;
+
+    --bitsy-color-palette-success-100: #dcfce7;
+    --bitsy-color-palette-success-500: #22c55e;
+    --bitsy-color-palette-success-700: #15803d;
+
+    --bitsy-color-palette-warning-100: #fef3c7;
+    --bitsy-color-palette-warning-500: #f59e0b;
+    --bitsy-color-palette-warning-700: #b45309;
+
+    --bitsy-color-palette-danger-100: #fee2e2;
+    --bitsy-color-palette-danger-500: #ef4444;
+    --bitsy-color-palette-danger-700: #b91c1c;
+
+    --bitsy-font-family-body: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
+    --bitsy-font-family-heading: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
+    --bitsy-font-family-code: "JetBrains Mono", "SFMono-Regular", monospace;
+
+    --bitsy-font-size-caption: 0.75rem;
+    --bitsy-font-size-body: 1rem;
+    --bitsy-font-size-body-large: 1.125rem;
+    --bitsy-font-size-heading: 1.5rem;
+    --bitsy-font-size-display: 2.25rem;
+
+    --bitsy-font-weight-body: 400;
+    --bitsy-font-weight-emphasis: 600;
+    --bitsy-font-weight-heading: 700;
+
+    --bitsy-line-height-body: 1.5;
+    --bitsy-line-height-heading: 1.2;
+
+    --bitsy-letter-spacing-tight: -0.02em;
+    --bitsy-letter-spacing-normal: 0em;
+    --bitsy-letter-spacing-wide: 0.04em;
+
+    --bitsy-space-0: 0rem;
+    --bitsy-space-1: 0.25rem;
+    --bitsy-space-2: 0.5rem;
+    --bitsy-space-3: 0.75rem;
+    --bitsy-space-4: 1rem;
+    --bitsy-space-5: 1.25rem;
+    --bitsy-space-6: 1.5rem;
+    --bitsy-space-8: 2rem;
+    --bitsy-space-10: 2.5rem;
+    --bitsy-space-12: 3rem;
+    --bitsy-space-16: 4rem;
+
+    --bitsy-space-inset-compact: var(--bitsy-space-2);
+    --bitsy-space-inset-comfortable: var(--bitsy-space-4);
+    --bitsy-space-inset-spacious: var(--bitsy-space-6);
+    --bitsy-space-stack-compact: var(--bitsy-space-3);
+    --bitsy-space-stack-standard: var(--bitsy-space-4);
+    --bitsy-space-stack-relaxed: var(--bitsy-space-6);
+    --bitsy-space-stack-roomy: var(--bitsy-space-8);
+    --bitsy-space-inline-compact: var(--bitsy-space-2);
+    --bitsy-space-inline-standard: var(--bitsy-space-4);
+    --bitsy-space-inline-relaxed: var(--bitsy-space-5);
+
+    --bitsy-radius-sharp: 0rem;
+    --bitsy-radius-subtle: 0.25rem;
+    --bitsy-radius-rounded: 0.5rem;
+    --bitsy-radius-pill: 999rem;
+    --bitsy-radius-interactive: var(--bitsy-radius-rounded);
+    --bitsy-radius-surface: var(--bitsy-radius-rounded);
+    --bitsy-radius-focus: var(--bitsy-radius-subtle);
+
+    --bitsy-shadow-subtle: 0 1px 2px rgb(15 23 42 / 0.08);
+    --bitsy-shadow-medium: 0 8px 24px rgb(15 23 42 / 0.12);
+    --bitsy-shadow-strong: 0 16px 40px rgb(15 23 42 / 0.18);
+    --bitsy-shadow-surface: var(--bitsy-shadow-subtle);
+    --bitsy-shadow-raised: var(--bitsy-shadow-medium);
+    --bitsy-shadow-overlay: var(--bitsy-shadow-strong);
+
+    --bitsy-motion-duration-instant: 80ms;
+    --bitsy-motion-duration-feedback: 160ms;
+    --bitsy-motion-duration-transition: 240ms;
+    --bitsy-motion-duration-emphasize: 360ms;
+    --bitsy-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+    --bitsy-motion-easing-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+    --bitsy-motion-easing-exit: cubic-bezier(0.7, 0, 1, 1);
+
+    --bitsy-color-background-canvas: var(--bitsy-color-palette-neutral-0);
+    --bitsy-color-background-surface: var(--bitsy-color-palette-neutral-50);
+    --bitsy-color-background-muted: var(--bitsy-color-palette-neutral-100);
+    --bitsy-color-background-emphasis: var(--bitsy-color-palette-brand-500);
+    --bitsy-color-background-success: var(--bitsy-color-palette-success-100);
+    --bitsy-color-background-warning: var(--bitsy-color-palette-warning-100);
+    --bitsy-color-background-danger: var(--bitsy-color-palette-danger-100);
+
+    --bitsy-color-border-subtle: var(--bitsy-color-palette-neutral-200);
+    --bitsy-color-border-standard: var(--bitsy-color-palette-neutral-300);
+    --bitsy-color-border-strong: var(--bitsy-color-palette-neutral-500);
+    --bitsy-color-border-emphasis: var(--bitsy-color-palette-brand-500);
+
+    --bitsy-color-text-primary: var(--bitsy-color-palette-neutral-900);
+    --bitsy-color-text-secondary: var(--bitsy-color-palette-neutral-600);
+    --bitsy-color-text-inverse: var(--bitsy-color-palette-neutral-0);
+    --bitsy-color-text-emphasis: var(--bitsy-color-palette-brand-700);
+    --bitsy-color-text-success: var(--bitsy-color-palette-success-700);
+    --bitsy-color-text-warning: var(--bitsy-color-palette-warning-700);
+    --bitsy-color-text-danger: var(--bitsy-color-palette-danger-700);
+  }
+}

@@ -3,7 +3,17 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "files": ["dist"],
+  "files": ["src"],
+  "exports": {
+    "./index.css": "./src/index.css",
+    "./reset.css": "./src/reset/index.css",
+    "./base.css": "./src/base/index.css",
+    "./tokens.css": "./src/base/tokens.css",
+    "./compositions.css": "./src/compositions/index.css",
+    "./blocks.css": "./src/blocks/index.css",
+    "./utilities.css": "./src/utilities/index.css",
+    "./themes.css": "./src/themes/index.css"
+  },
   "scripts": {
     "build": "echo \"build styles later\"",
     "lint": "echo \"lint styles later\"",

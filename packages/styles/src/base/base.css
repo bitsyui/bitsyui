@@ -1,0 +1,31 @@
+@layer bitsy-base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    font-family: var(--bitsy-font-family-body);
+    font-size: 100%;
+    line-height: var(--bitsy-line-height-body);
+  }
+
+  body {
+    background-color: var(--bitsy-color-background-canvas);
+    color: var(--bitsy-color-text-primary);
+    font-size: var(--bitsy-font-size-body);
+  }
+
+  :where(a) {
+    color: var(--bitsy-color-text-emphasis);
+  }
+
+  :where(hr) {
+    margin-block: var(--bitsy-space-stack-relaxed);
+    border: 0;
+    border-top: 1px solid var(--bitsy-color-border-subtle);
+  }
+
+  :where(code, kbd, samp, pre) {
+    font-family: var(--bitsy-font-family-code);
+  }
+}

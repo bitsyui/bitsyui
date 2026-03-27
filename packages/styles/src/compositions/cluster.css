@@ -1,0 +1,8 @@
+@layer bitsy-compositions {
+  .o-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--bitsy-space-inline-standard);
+    align-items: center;
+  }
+}

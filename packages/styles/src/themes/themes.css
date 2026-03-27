@@ -1,0 +1,55 @@
+@layer bitsy-themes {
+  :where(html[data-bitsy-theme="light"]) {
+    color-scheme: light;
+  }
+
+  :where(html[data-bitsy-theme="dark"]) {
+    color-scheme: dark;
+    --bitsy-color-background-canvas: var(--bitsy-color-palette-neutral-950);
+    --bitsy-color-background-surface: var(--bitsy-color-palette-neutral-900);
+    --bitsy-color-background-muted: var(--bitsy-color-palette-neutral-800);
+    --bitsy-color-background-emphasis: var(--bitsy-color-palette-brand-300);
+    --bitsy-color-background-success: var(--bitsy-color-palette-success-700);
+    --bitsy-color-background-warning: var(--bitsy-color-palette-warning-700);
+    --bitsy-color-background-danger: var(--bitsy-color-palette-danger-700);
+
+    --bitsy-color-border-subtle: var(--bitsy-color-palette-neutral-800);
+    --bitsy-color-border-standard: var(--bitsy-color-palette-neutral-700);
+    --bitsy-color-border-strong: var(--bitsy-color-palette-neutral-400);
+    --bitsy-color-border-emphasis: var(--bitsy-color-palette-brand-300);
+
+    --bitsy-color-text-primary: var(--bitsy-color-palette-neutral-50);
+    --bitsy-color-text-secondary: var(--bitsy-color-palette-neutral-300);
+    --bitsy-color-text-inverse: var(--bitsy-color-palette-neutral-950);
+    --bitsy-color-text-emphasis: var(--bitsy-color-palette-brand-300);
+    --bitsy-color-text-success: var(--bitsy-color-palette-success-100);
+    --bitsy-color-text-warning: var(--bitsy-color-palette-warning-100);
+    --bitsy-color-text-danger: var(--bitsy-color-palette-danger-100);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :where(html:not([data-bitsy-theme])) {
+      color-scheme: dark;
+      --bitsy-color-background-canvas: var(--bitsy-color-palette-neutral-950);
+      --bitsy-color-background-surface: var(--bitsy-color-palette-neutral-900);
+      --bitsy-color-background-muted: var(--bitsy-color-palette-neutral-800);
+      --bitsy-color-background-emphasis: var(--bitsy-color-palette-brand-300);
+      --bitsy-color-background-success: var(--bitsy-color-palette-success-700);
+      --bitsy-color-background-warning: var(--bitsy-color-palette-warning-700);
+      --bitsy-color-background-danger: var(--bitsy-color-palette-danger-700);
+
+      --bitsy-color-border-subtle: var(--bitsy-color-palette-neutral-800);
+      --bitsy-color-border-standard: var(--bitsy-color-palette-neutral-700);
+      --bitsy-color-border-strong: var(--bitsy-color-palette-neutral-400);
+      --bitsy-color-border-emphasis: var(--bitsy-color-palette-brand-300);
+
+      --bitsy-color-text-primary: var(--bitsy-color-palette-neutral-50);
+      --bitsy-color-text-secondary: var(--bitsy-color-palette-neutral-300);
+      --bitsy-color-text-inverse: var(--bitsy-color-palette-neutral-950);
+      --bitsy-color-text-emphasis: var(--bitsy-color-palette-brand-300);
+      --bitsy-color-text-success: var(--bitsy-color-palette-success-100);
+      --bitsy-color-text-warning: var(--bitsy-color-palette-warning-100);
+      --bitsy-color-text-danger: var(--bitsy-color-palette-danger-100);
+    }
+  }
+}

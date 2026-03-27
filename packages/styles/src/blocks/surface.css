@@ -1,0 +1,9 @@
+@layer bitsy-blocks {
+  .b-surface {
+    padding: var(--bitsy-space-inset-comfortable);
+    border: 1px solid var(--bitsy-color-border-subtle);
+    border-radius: var(--bitsy-radius-surface);
+    background-color: var(--bitsy-color-background-surface);
+    box-shadow: var(--bitsy-shadow-surface);
+  }
+}

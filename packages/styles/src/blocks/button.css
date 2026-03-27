@@ -1,0 +1,23 @@
+@layer bitsy-blocks {
+  .b-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--bitsy-space-inline-compact);
+    min-block-size: 2.75rem;
+    padding-inline: var(--bitsy-space-inset-comfortable);
+    padding-block: var(--bitsy-space-inset-compact);
+    border: 1px solid var(--bitsy-color-border-emphasis);
+    border-radius: var(--bitsy-radius-interactive);
+    background-color: var(--bitsy-color-background-emphasis);
+    color: var(--bitsy-color-text-inverse);
+    box-shadow: var(--bitsy-shadow-surface);
+    transition:
+      background-color var(--bitsy-motion-duration-feedback) var(--bitsy-motion-easing-standard),
+      transform var(--bitsy-motion-duration-feedback) var(--bitsy-motion-easing-standard);
+  }
+
+  .b-button:where(:hover, :focus-visible) {
+    transform: translateY(-1px);
+  }
+}

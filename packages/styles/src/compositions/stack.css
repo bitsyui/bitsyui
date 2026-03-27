@@ -1,0 +1,7 @@
+@layer bitsy-compositions {
+  .o-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--bitsy-space-stack-standard);
+  }
+}
